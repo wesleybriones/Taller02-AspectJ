@@ -8,7 +8,7 @@ public aspect Logger {
 
     pointcut success() : call(* create*(..) );
     after() : success() {
-    //Aspecto ejemplo: solo muestra este mensaje después de haber creado un usuario 
+    //Aspecto ejemplo: solo muestra este mensaje despuï¿½s de haber creado un usuario 
     	System.out.println("**** User created ****");
     }
     int hora, minutos, segs;
@@ -24,7 +24,7 @@ public aspect Logger {
 		try {
 			FileWriter fw = new FileWriter(file,true);	
 			PrintWriter pw= new PrintWriter(fw);
-			pw.append("Tipo de transaccion: Retiro de dinero, Hora: "+ hora+ ":"+ minutos+ ":" + segs\n);
+			pw.append("Tipo de transaccion: Retiro de dinero, Hora: "+ hora+ ":"+ minutos+ ":" + segs+"\n");
 			pw.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -41,7 +41,7 @@ public aspect Logger {
 		try {
 			FileWriter fw = new FileWriter(file,true);
 			PrintWriter pw= new PrintWriter(fw);
-			pw.append("Tipo de transaccion: Realizacion de transaccion, Hora: "+ hora+ ":"+ minutos+ ":" + segs\n);
+			pw.append("Tipo de transaccion: Realizacion de transaccion, Hora: "+ hora+ ":"+ minutos+ ":" + segs+"\n");
 			pw.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
